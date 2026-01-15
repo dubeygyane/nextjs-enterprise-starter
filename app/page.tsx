@@ -67,13 +67,6 @@ export default function HomePage() {
             >
               Get Started
             </Button>
-            <Button
-              onClick={() => router.push('/posts')}
-              variant="secondary"
-              className="text-lg px-8 py-3"
-            >
-              View Static Blog
-            </Button>
           </div>
 
           {/* Features Grid */}

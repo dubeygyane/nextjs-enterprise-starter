@@ -73,7 +73,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 transition-colors duration-300">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950 transition-colors duration-300">
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Welcome Card */}
@@ -166,7 +166,7 @@ export default function DashboardPage() {
         </div>
 
         {/* React Query Demo Card */}
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-800 rounded-xl shadow-md p-6 border border-blue-200 dark:border-blue-900 transition-colors duration-300">
+        <div className="bg-linear-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-800 rounded-xl shadow-md p-6 border border-blue-200 dark:border-blue-900 transition-colors duration-300">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
             <LightningIcon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             TanStack Query Features Demonstrated

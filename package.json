@@ -7,13 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "test:related": "jest --bail --findRelatedTests --passWithNoTests",
     "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix",
-      "jest --bail --findRelatedTests"
+      "jest --bail --findRelatedTests --passWithNoTests"
     ]
   },
   "dependencies": {
