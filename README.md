@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 16 Enterprise Starter
 
-## Getting Started
+A production-ready Next.js application template featuring robust authentication, a protected dashboard, static blog generation, and a fully integrated dark mode system. Built with modern best practices for performance and scalability.
 
-First, run the development server:
+## 🚀 Features
+
+- **🔐 Advanced Authentication**
+  - Edge-compatible Middleware protection
+  - Secure HTTP-only cookie management
+  - Automatic token rotation and refresh handling
+  - Protected Service/API layers
+
+- **🎨 Modern UI/UX**
+  - **Dark/Light Theme**: Built-in support with automatic system detection
+  - **Tailwind CSS v4**: Utility-first styling with custom design tokens
+  - **Responsive Design**: Mobile-first layouts for all pages
+  - **UI Components**: Reusable, accessible components (Buttons, Inputs, Skeletons)
+
+- **⚡ High Performance**
+  - **TanStack Query**: Server-state management with caching, optimistic updates, and background refetching
+  - **Static Site Generation (SSG)**: Example implementation for high-performance content pages (`/posts`)
+  - **Optimized Assets**: Font optimization and efficient layouts
+
+- **🛡️ Developer Experience**
+  - **TypeScript**: Strict type checking across the entire stack
+  - **Form Handling**: React Hook Form integration with Zod schema validation
+  - **Standardized Icons**: React Bootstrap Icons integration
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **State Management**: [TanStack Query v5](https://tanstack.com/query/latest)
+- **Forms**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+- **Theming**: [next-themes](https://github.com/pacocoursey/next-themes)
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── app/
+│   ├── api/              # standard Next.js API routes
+│   ├── dashboard/        # Protected application area (requires auth)
+│   ├── login/            # Authentication entry point
+│   ├── posts/            # Static Site Generation example (Blog)
+│   └── page.tsx          # Landing page
+├── components/           
+│   ├── providers/        # Context providers (Query, Theme)
+│   └── ui/               # Shared UI components (Input, Button, ThemeToggle)
+├── hooks/                
+│   ├── auth/             # Authentication logic hooks
+│   └── useFetch.ts       # Type-safe data fetching wrapper
+├── lib/                  # Core configurations (Axios, Query Client)
+├── middleware.ts         # Edge-based route protection
+└── services/             # Business logic and API calls
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Run development server**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. **Build for production**
+   ```bash
+   npm run build
+   npm start
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+Visit `http://localhost:3000` to view the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔐 Credentials for Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use these credentials to test the authentication flow:
 
-## Deploy on Vercel
+- **Email**: `user@example.com`
+- **Password**: `password123`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📖 Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- See [HOOKS_USAGE.md](./HOOKS_USAGE.md) for detailed documentation on using the custom hooks.
+
+## 📝 License
+
+MIT
