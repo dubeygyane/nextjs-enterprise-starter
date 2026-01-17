@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import QueryProvider from "@/lib/query-provider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
@@ -42,6 +43,7 @@ export default function RootLayout({
             </div>
           </ThemeProvider>
         </QueryProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
