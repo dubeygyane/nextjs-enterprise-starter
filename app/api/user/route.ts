@@ -39,8 +39,7 @@ export async function GET(request: NextRequest) {
         }
 
         return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
-    } catch (error) {
-        console.error('Get user error:', error);
+    } catch (_error) {
         return NextResponse.json(
             { error: 'Internal server error' },
             { status: 500 }

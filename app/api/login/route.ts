@@ -52,8 +52,7 @@ export async function POST(request: NextRequest) {
             { error: 'Invalid email or password' },
             { status: 401 }
         );
-    } catch (error) {
-        console.error('Login error:', error);
+    } catch (_error) {
         return NextResponse.json(
             { error: 'Internal server error' },
             { status: 500 }

@@ -37,7 +37,6 @@ interface UserData {
 
 export default function DashboardPage() {
   const router = useRouter();
-
   // useFetch automatically handles auth:
   // - Token is attached via axios interceptor
   // - 401 errors trigger automatic token refresh

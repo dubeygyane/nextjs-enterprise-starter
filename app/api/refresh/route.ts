@@ -38,8 +38,7 @@ export async function POST(request: NextRequest) {
             { error: 'Invalid refresh token' },
             { status: 401 }
         );
-    } catch (error) {
-        console.error('Refresh token error:', error);
+    } catch (_error) {
         return NextResponse.json(
             { error: 'Internal server error' },
             { status: 500 }
