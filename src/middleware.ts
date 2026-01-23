@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 /**
- * Next.js Proxy (Future replacement for middleware)
+ * Next.js Middleware
  *
  * PURPOSE:
  * - Runs on the Edge before route handling
@@ -35,9 +35,9 @@ function isAuthRoute(pathname: string): boolean {
   return AUTH_ROUTES.some(route => pathname.startsWith(route));
 }
 
-// ================= PROXY HANDLER =================
+// ================= MIDDLEWARE HANDLER =================
 
-export default function proxy(request: NextRequest) {
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const authenticated = isAuthenticated(request);
 
